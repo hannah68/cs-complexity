@@ -6,20 +6,23 @@ Space Complexity: O(1)
 
 // this method Finished in 0.012 seconds;
 export const bubbleSort = (array) => {
- 
-    for(let i = array.length; i > 0; i--){/* first time => i = 4 */
-        for(let j = 0; j< i - 1; j++){ /* first time => it gives us 3 comparison */
-            // console.log(array, array[j], array[j+1]);
-            if(array[j] > array[j+1]){
-                // swap two numbers
-                let temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-            }
-        }
-    }
-    return array;
-} 
+	for (let i = array.length; i > 0; i--) {
+		/* first time => i = 4 */
+		for (let j = 0; j < i - 1; j++) {
+			/* first time => it gives us 3 comparison */
+			// console.log(array, array[j], array[j+1]);
+			if (array[j] > array[j + 1]) {
+				// swap two numbers
+				let temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+			}
+		}
+	}
+	return array;
+};
+
+// bubbleSort([9,3,2,11])
 
 // this method Finished in 0.013 seconds; ***************
 // if we don't make any swap, don't swap(break);
@@ -28,7 +31,7 @@ export const bubbleSort = (array) => {
 
 //     for(let i = array.length; i > 0; i--){
 //         noSwap = true;
-//         for(let j = 0; j< i - 1; j++){ 
+//         for(let j = 0; j< i - 1; j++){
 //             // console.log(array, array[j], array[j+1]);
 //             if(array[j] > array[j+1]){
 //                 // swap two numbers
@@ -41,7 +44,7 @@ export const bubbleSort = (array) => {
 //         if(noSwap) break;
 //     }
 //     return array;
-// } 
+// }
 
 // this method gives us undefined and Finished in 0.013 seconds; **************
 // export const bubbleSort = (array) => {
@@ -61,7 +64,3 @@ export const bubbleSort = (array) => {
 //     } while (checked);
 //     return array;
 // };
-
-
-bubbleSort([9,3,2,11])
-
