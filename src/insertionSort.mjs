@@ -10,20 +10,17 @@ export const insertionSort = (arr) => {
         for ( let j = i; j >= 0; j-- ) {
             // now compare the second element with the one before it and if it's in the incorrect order, iterate through the sorted portion(left side) to place the element in the correct place.
             if ( arr[ j - 1 ] > arr[ j ] ) {
-              
                 // console.log('before swap', arr);
                 
                 [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]]
                 
                 // console.log('after swap', arr)
-                
             } else {
                 break
             }
         }
     }
     return arr
-    
 }
 
 // [5,3,4,1]
