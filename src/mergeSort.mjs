@@ -1,6 +1,6 @@
 /*
 Conceptual description: it's a combination of merging and sorting. divide and conqure approach(we split up the larger arr into smaller subArray until we get to zero or one element arr, then we merge them together)
-Time Complexity: O(nLognn)
+Time Complexity: O(nLognn) 
 Space Complexity:O(n)
 */
 
@@ -24,4 +24,14 @@ export const mergeSort = (arr) => {
     return merge(left, right);
 } 
 
-mergeSort([5,3,4,1])
+// mergeSort([5,3,4,1]);
+
+// we finish sorting the left side and then move on to the right side to sort.
+
+// spliting=========================
+//          [5,3,4,1]
+//      [5,3]        [4,1]
+// [5] [3]                 [4] [1]
+// merge============================
+//  [3,5]                    [1,4]
+//            [1,3,4,5]
