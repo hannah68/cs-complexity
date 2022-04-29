@@ -5,6 +5,7 @@ import { insertionSort } from '../src/insertionSort.mjs'
 import { mergeSort } from '../src/mergeSort.mjs'
 import { quickSort } from '../src/quickSort.mjs'
 import { selectionSort } from '../src/selectionSort.mjs'
+import { radixSort } from '../src/radixSort.mjs'
 
 import { unsortedData, sortedData } from './data.mjs'
 
@@ -44,6 +45,13 @@ describe('mergeSort', function() {
 })
 
 describe('quickSort', function() {
+    it('correctly sorts', function() {
+        const sorted = quickSort(unsortedData);
+        expect(sorted).toEqual(sortedData);
+    })
+})
+
+describe('radixSort', function() {
     it('correctly sorts', function() {
         const sorted = quickSort(unsortedData);
         expect(sorted).toEqual(sortedData);
